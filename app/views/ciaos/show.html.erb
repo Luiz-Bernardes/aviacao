@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @ciao.nome %>
+</p>
+
+<p>
+  <b>Sede:</b>
+  <%= @ciao.sede %>
+</p>
+
+
+<%= link_to 'Edit', edit_ciao_path(@ciao) %> |
+<%= link_to 'Back', ciaos_path %>
