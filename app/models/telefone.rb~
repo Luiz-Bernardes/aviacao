@@ -1,0 +1,4 @@
+class Telefone < ActiveRecord::Base
+  belongs_to :passageiro
+  attr_accessible :numero
+end
