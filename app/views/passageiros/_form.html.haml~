@@ -1,0 +1,45 @@
+<%= form_for(@passageiro) do |f| %>
+  <% if @passageiro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@passageiro.errors.count, "error") %> prohibited this passageiro from being saved:</h2>
+
+      <ul>
+      <% @passageiro.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bairro %><br />
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :idade %><br />
+    <%= f.number_field :idade %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :rg %><br />
+    <%= f.text_field :rg %>
+  </div>
+  <div class="field">
+    <%= f.label :rua %><br />
+    <%= f.text_field :rua %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

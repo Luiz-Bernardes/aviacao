@@ -1,0 +1,58 @@
+# coding: utf-8
+
+require 'spec_helper'
+
+feature 'gerenciar passageiro' do
+
+  scenario 'incluir passageiro' do # , :javascript => true  do
+
+    visit new_passageiro_path
+
+    preencher_e_verificar_passageiro
+
+  end
+
+  scenario 'alterar passageiro' do #, :javascript => true  do
+
+    passageiro = FactoryGirl.create(:passageiro)
+
+    visit edit_passageiro_path(passageiro)
+
+    preencher_e_verificar_passageiro
+
+  end
+
+   scenario 'excluir passageiro' do #, :javascript => true  do
+
+       passageiro = FactoryGirl.create(:passageiro)
+
+        visit passageiros_path
+
+        click_link 'Excluir'
+
+  end
+
+   def preencher_e_verificar_passageiro
+
+      fill_in 'Bairro', :with => "Bairro"
+      fill_in 'Cidade', :with => "Cidade"
+      fill_in 'Cpf', :with => "123"
+      fill_in 'Idade', :with => 10
+      fill_in 'Nome', :with => "Luiz"
+      fill_in 'Rg', :with => "12345"
+      fill_in 'Rua', :with => "Rua"
+
+      click_button 'Salvar'
+
+      page.should have_content 'Bairro: Bairro'
+      page.should have_content 'Cidade: Cidade'
+      page.should have_content 'Cpf: 123'
+      page.should have_content 'Idade: 10'
+      page.should have_content 'Nome: Luiz'
+      page.should have_content 'Rg: 12345'
+      page.should have_content 'Rua: Rua'
+
+   end
+
+end
+

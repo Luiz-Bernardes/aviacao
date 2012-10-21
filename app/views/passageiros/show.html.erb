@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bairro:</b>
+  <%= @passageiro.bairro %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @passageiro.cidade %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @passageiro.cpf %>
+</p>
+
+<p>
+  <b>Idade:</b>
+  <%= @passageiro.idade %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @passageiro.nome %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @passageiro.rg %>
+</p>
+
+<p>
+  <b>Rua:</b>
+  <%= @passageiro.rua %>
+</p>
+
+
+<%= link_to 'Edit', edit_passageiro_path(@passageiro) %> |
+<%= link_to 'Back', passageiros_path %>

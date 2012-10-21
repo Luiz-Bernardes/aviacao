@@ -1,4 +1,6 @@
 Aviacao::Application.routes.draw do
+  resources :passageiros
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

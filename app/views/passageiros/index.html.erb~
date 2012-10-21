@@ -1,0 +1,35 @@
+<h1>Listing passageiros</h1>
+
+<table>
+  <tr>
+    <th>Bairro</th>
+    <th>Cidade</th>
+    <th>Cpf</th>
+    <th>Idade</th>
+    <th>Nome</th>
+    <th>Rg</th>
+    <th>Rua</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @passageiros.each do |passageiro| %>
+  <tr>
+    <td><%= passageiro.bairro %></td>
+    <td><%= passageiro.cidade %></td>
+    <td><%= passageiro.cpf %></td>
+    <td><%= passageiro.idade %></td>
+    <td><%= passageiro.nome %></td>
+    <td><%= passageiro.rg %></td>
+    <td><%= passageiro.rua %></td>
+    <td><%= link_to 'Show', passageiro %></td>
+    <td><%= link_to 'Edit', edit_passageiro_path(passageiro) %></td>
+    <td><%= link_to 'Destroy', passageiro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Passageiro', new_passageiro_path %>
