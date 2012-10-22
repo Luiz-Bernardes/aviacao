@@ -1,0 +1,27 @@
+<h1>Listing voos</h1>
+
+<table>
+  <tr>
+    <th>Tarifa</th>
+    <th>Ciao</th>
+    <th>Destino</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @voos.each do |voo| %>
+  <tr>
+    <td><%= voo.tarifa %></td>
+    <td><%= voo.ciao %></td>
+    <td><%= voo.destino %></td>
+    <td><%= link_to 'Show', voo %></td>
+    <td><%= link_to 'Edit', edit_voo_path(voo) %></td>
+    <td><%= link_to 'Destroy', voo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Voo', new_voo_path %>

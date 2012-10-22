@@ -1,4 +1,6 @@
 Aviacao::Application.routes.draw do
+  resources :voos
+
   resources :destinos
 
   resources :paises

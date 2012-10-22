@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tarifa:</b>
+  <%= @voo.tarifa %>
+</p>
+
+<p>
+  <b>Ciao:</b>
+  <%= @voo.ciao %>
+</p>
+
+<p>
+  <b>Destino:</b>
+  <%= @voo.destino %>
+</p>
+
+
+<%= link_to 'Edit', edit_voo_path(@voo) %> |
+<%= link_to 'Back', voos_path %>

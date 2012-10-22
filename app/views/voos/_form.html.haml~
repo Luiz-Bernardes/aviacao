@@ -1,0 +1,29 @@
+<%= form_for(@voo) do |f| %>
+  <% if @voo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@voo.errors.count, "error") %> prohibited this voo from being saved:</h2>
+
+      <ul>
+      <% @voo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tarifa %><br />
+    <%= f.text_field :tarifa %>
+  </div>
+  <div class="field">
+    <%= f.label :ciao %><br />
+    <%= f.text_field :ciao %>
+  </div>
+  <div class="field">
+    <%= f.label :destino %><br />
+    <%= f.text_field :destino %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
