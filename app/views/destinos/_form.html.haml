@@ -1,0 +1,4 @@
+= semantic_form_for [@destino] do |form|
+  = form.input :nome, :label => 'Nome'
+  = form.input :paise, :member_label => :nome, :label => 'Paise' 
+  = form.submit 'Salvar'

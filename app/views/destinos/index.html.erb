@@ -1,0 +1,25 @@
+<h1>Listing destinos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Paise</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @destinos.each do |destino| %>
+  <tr>
+    <td><%= destino.nome %></td>
+    <td><%= destino.paise %></td>
+    <td><%= link_to 'Show', destino %></td>
+    <td><%= link_to 'Edit', edit_destino_path(destino) %></td>
+    <td><%= link_to 'Excluir', destino, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Destino', new_destino_path %>
