@@ -1,0 +1,31 @@
+<h1>Listing passageirovoos</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Numpassageiros</th>
+    <th>Passageiro</th>
+    <th>Voo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @passageirovoos.each do |passageirovoo| %>
+  <tr>
+    <td><%= passageirovoo.data %></td>
+    <td><%= passageirovoo.hora %></td>
+    <td><%= passageirovoo.numpassageiros %></td>
+    <td><%= passageirovoo.passageiro %></td>
+    <td><%= passageirovoo.voo %></td>
+    <td><%= link_to 'Show', passageirovoo %></td>
+    <td><%= link_to 'Edit', edit_passageirovoo_path(passageirovoo) %></td>
+    <td><%= link_to 'Excluir', passageirovoo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Passageirovoo', new_passageirovoo_path %>

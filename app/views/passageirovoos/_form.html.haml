@@ -1,0 +1,5 @@
+= semantic_form_for [@passageirovoo] do |form|
+  = form.input :numpassageiros, :label => 'Numpassageiros'
+  = form.input :passageiro, :member_label => :nome, :label => 'Passageiro' 
+  = form.input :voo, :member_label => :tarifa, :label => 'Voo' 
+  = form.submit 'Salvar'

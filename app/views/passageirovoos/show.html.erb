@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @passageirovoo.data %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @passageirovoo.hora %>
+</p>
+
+<p>
+  <b>Numpassageiros:</b>
+  <%= @passageirovoo.numpassageiros %>
+</p>
+
+<p>
+  <b>Passageiro:</b>
+  <%= @passageirovoo.passageiro.nome %>
+</p>
+
+<p>
+  <b>Voo:</b>
+  <%= @passageirovoo.voo.tarifa %>
+</p>
+
+
+<%= link_to 'Edit', edit_passageirovoo_path(@passageirovoo) %> |
+<%= link_to 'Back', passageirovoos_path %>
